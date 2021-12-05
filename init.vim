@@ -25,6 +25,10 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 let g:airline_theme='tomorrow'
 
+" CoC
+nnoremap <silent> ]c :call CocAction('diagnosticNext')<CR>
+nnoremap <silent> [c :call CocAction('diagnosticPrevious')<CR>
+
 " ====================
 " MAPPINGS
 " ====================

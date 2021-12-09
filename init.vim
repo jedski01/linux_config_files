@@ -53,6 +53,12 @@ nnoremap tn :tabnew<CR>
 nnoremap to :tabonly<CR>
 nnoremap ts :tab split<CR>
 
+" Buffer mapping
+nnoremap <silent> fh :bf<CR>
+nnoremap <silent> fj :bn<CR>
+nnoremap <silent> fk :bp<CR>
+nnoremap <silent> fl :bl<CR>
+
 " Comments
 noremap <silent> <Leader>cc :TComment<CR>
 

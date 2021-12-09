@@ -1,11 +1,15 @@
 :set number
 :set autoindent
-:set tabstop=4
+:set smartindent
 :set smarttab
-:set softtabstop=4
+:set tabstop=8
+:set softtabstop=0
+:set shiftwidth=4
 :set nohlsearch
 :set cursorline
 :set guitablabel=%t
+:set formatoptions=tcqjor
+:set signcolumn=yes
 
 " ====================
 " SETTINGS
@@ -64,9 +68,10 @@ Plug 'tomtom/tcomment_vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'roxma/vim-tmux-clipboard'
 
 call plug#end()
-"
+
 " ====================
 " THEMES
 " ====================
@@ -74,3 +79,10 @@ colorscheme base16-tomorrow-night
 
 highlight RedundantSpaces ctermbg=red guibg=red
 match RedundantSpaces /\s\+$/
+
+" ====================
+" COC
+" ====================
+function! InstallCocPlugins()
+    CocInstall coc-tsserver coc-json coc-git coc-css coc-eslint
+endfunction
